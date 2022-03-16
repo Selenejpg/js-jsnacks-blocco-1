@@ -1,13 +1,17 @@
-let parolaUno = prompt ("Scrivi la prima parola").length;
+let parolaUno = prompt ("Scrivi la prima parola");
 
-let parolaDue = prompt ("Scrivi la seconda parola").length;
+let parolaDue = prompt ("Scrivi la seconda parola");
+
+let numeroUno = Number(parolaUno.length)
+
+let numeroDue = Number(parolaDue.length)
 
 
 
-if ( parolaUno > parolaDue) {
-    document.getElementById("parolaLunga").innerHTML = `${parolaUno}`;
-    document.getElementById("parolaCorta").innerHTML = `${parolaDue}`;
+if ( parolaUno < parolaDue) {
+    document.getElementById("parola").innerHTML = `${parolaUno} ${parolaDue}`;
+}else if (parolaUno > parolaDue){
+    document.getElementById("parola").innerHTML = `${parolaDue} ${parolaUno}`;
 }else {
-    document.getElementById("parolaLunga").innerHTML = `${parolaDue}`;
-    document.getElementById("parolaCorta").innerHTML = `${parolaUno}`;
+    document.getElementById("parola").innerHTML = "Le due parole hanno la stessa lunghezza"
 }
